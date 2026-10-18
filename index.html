@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prince Aeron D. Montallana's System Administrator Career Portfolio" />
+  <title>Prince | SysAdmin Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Nunito:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="embers" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand">
+      <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="4" width="18" height="7" rx="2"></rect>
+        <rect x="3" y="13" width="18" height="7" rx="2"></rect>
+        <path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"></path>
+      </svg>
+      Prince<span class="brand-dot">.sys</span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#roles" data-i18n="nav_roles">Roles</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#tools" data-i18n="nav_tools">Tools</a></li>
+        <li><a href="#playground" data-i18n="nav_try">Try Code</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="pill-btn" id="langBtn" aria-label="Translate English / Tagalog" title="English / Tagalog">EN</button>
+      <button class="pill-btn icon" id="themeBtn" aria-label="Toggle dark and light mode" title="Dark / Light">&#9790;</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HOME ============ -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="hello" data-i18n="hero_hello">Hi, I'm</p>
+        <h1 class="fire-name" id="heroName">Prince</h1>
+        <p class="typing-line"><span class="prompt">&gt;</span> <span id="typed"></span><span class="cursor">|</span></p>
+        <h2 class="site-title" data-i18n="hero_title">Web-Based System Administrator Career Portfolio: Fundamentals</h2>
+        <p class="intro" data-i18n="hero_intro">System Administration is the work of keeping computers, servers, networks, and user accounts running smoothly, securely, and reliably. A System Administrator is the quiet hero who makes sure everyone else can do their work.</p>
+        <div class="hero-cta">
+          <a href="#roles" class="btn btn-fire" data-i18n="hero_btn1">Explore the Profession</a>
+          <a href="#playground" class="btn btn-ghost" data-i18n="hero_btn2">Try the Code</a>
+        </div>
+        <div class="stats">
+          <div><strong data-count="5">0</strong><span data-i18n="stat1">Core responsibilities</span></div>
+          <div><strong data-count="10">0</strong><span data-i18n="stat2">Key skills</span></div>
+          <div><strong data-count="8">0</strong><span data-i18n="stat3">Everyday tools</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-ring">
+          <img src="images%20014.jpg" alt="Portrait of Prince Aeron D. Montallana" onerror="this.onerror=null;this.src='profile.svg';" />
+        </div>
+        <span class="float-chip c1">uptime 99.9%</span>
+        <span class="float-chip c2">sudo make coffee</span>
+        <span class="float-chip c3">ping OK</span>
+      </div>
+    </section>
+
+    <!-- ============ ROLES ============ -->
+    <section class="section" id="roles">
+      <h2 class="section-title" data-i18n="roles_title">Roles and Responsibilities</h2>
+      <p class="section-sub" data-i18n="roles_sub">What a System Administrator does every day to keep systems alive.</p>
+      <div class="grid">
+        <article class="card tilt"><div class="ico">&#128187;</div><h3 data-i18n="r1_t">Installing &amp; Maintaining Operating Systems</h3><p data-i18n="r1_d">Installs, configures, and updates operating systems like Windows Server and Linux, including patches that fix bugs and security holes.</p></article>
+        <article class="card tilt"><div class="ico">&#128101;</div><h3 data-i18n="r2_t">Managing User Accounts &amp; Permissions</h3><p data-i18n="r2_d">Creates, edits, and removes accounts, and gives each person only the access they need (principle of least privilege).</p></article>
+        <article class="card tilt"><div class="ico">&#128200;</div><h3 data-i18n="r3_t">Monitoring System Performance</h3><p data-i18n="r3_d">Watches CPU, memory, disk, and network usage so problems are caught and fixed before users even notice.</p></article>
+        <article class="card tilt"><div class="ico">&#128190;</div><h3 data-i18n="r4_t">Performing Backups &amp; Recovery</h3><p data-i18n="r4_d">Schedules backups and tests restores so data can be brought back after a crash, mistake, or attack.</p></article>
+        <article class="card tilt"><div class="ico">&#128295;</div><h3 data-i18n="r5_t">Troubleshooting Hardware &amp; Software</h3><p data-i18n="r5_d">Finds the root cause of errors, slow systems, and failed devices, then fixes them and documents the solution.</p></article>
+        <article class="card tilt"><div class="ico">&#128737;</div><h3 data-i18n="r6_t">Securing Systems &amp; Networks</h3><p data-i18n="r6_d">Applies firewalls, strong passwords, and security updates to protect the organization's data from threats.</p></article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section alt" id="skills">
+      <h2 class="section-title" data-i18n="skills_title">Technical and Professional Skills</h2>
+      <p class="section-sub" data-i18n="skills_sub">A great SysAdmin needs both the tech know-how and the people skills.</p>
+      <div class="skills-wrap">
+        <div class="skill-col">
+          <h3 class="col-title" data-i18n="tech_h">Technical Skills</h3>
+          <div class="skill"><div class="skill-head"><span data-i18n="s1">Operating System Administration</span><b>90%</b></div><div class="bar"><i style="--w:90%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s2">Networking (TCP/IP, DNS, DHCP)</span><b>85%</b></div><div class="bar"><i style="--w:85%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s3">Scripting &amp; Automation</span><b>80%</b></div><div class="bar"><i style="--w:80%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s4">Security &amp; Access Control</span><b>75%</b></div><div class="bar"><i style="--w:75%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s5">Virtualization &amp; Cloud Basics</span><b>70%</b></div><div class="bar"><i style="--w:70%"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3 class="col-title" data-i18n="pro_h">Professional Skills</h3>
+          <div class="skill"><div class="skill-head"><span data-i18n="s6">Problem-Solving</span><b>95%</b></div><div class="bar"><i style="--w:95%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s7">Communication</span><b>85%</b></div><div class="bar"><i style="--w:85%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s8">Time Management</span><b>80%</b></div><div class="bar"><i style="--w:80%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s9">Documentation</span><b>78%</b></div><div class="bar"><i style="--w:78%"></i></div></div>
+          <div class="skill"><div class="skill-head"><span data-i18n="s10">Teamwork &amp; Customer Service</span><b>88%</b></div><div class="bar"><i style="--w:88%"></i></div></div>
+        </div>
+      </div>
+      <p class="note" data-i18n="skills_note">Percentages show my current learning level as a student, not a final rating.</p>
+    </section>
+
+    <!-- ============ TOOLS ============ -->
+    <section class="section" id="tools">
+      <h2 class="section-title" data-i18n="tools_title">System Administration Tools</h2>
+      <p class="section-sub" data-i18n="tools_sub">Common tools and technologies used by System Administrators.</p>
+      <div class="grid tools">
+        <article class="card tool tilt"><span class="tag">Windows</span><h3>Windows Server</h3><p data-i18n="t1_d">Microsoft's server OS for running Active Directory, file sharing, and company services.</p></article>
+        <article class="card tool tilt"><span class="tag">Linux</span><h3>Ubuntu Server</h3><p data-i18n="t2_d">A popular, free Linux server OS used to host websites, databases, and applications.</p></article>
+        <article class="card tool tilt"><span class="tag">Shell</span><h3>PowerShell</h3><p data-i18n="t3_d">A command-line shell and scripting language for automating tasks on Windows systems.</p></article>
+        <article class="card tool tilt"><span class="tag">Remote</span><h3>SSH</h3><p data-i18n="t4_d">Secure Shell lets admins safely log in and control remote servers over an encrypted connection.</p></article>
+        <article class="card tool tilt"><span class="tag">Virtual</span><h3>VirtualBox</h3><p data-i18n="t5_d">Free software to run virtual machines, perfect for practicing installs and testing safely.</p></article>
+        <article class="card tool tilt"><span class="tag">Linux</span><h3>Bash</h3><p data-i18n="t6_d">The standard Linux shell for running commands and writing automation scripts.</p></article>
+        <article class="card tool tilt"><span class="tag">Monitor</span><h3>Task Manager / htop</h3><p data-i18n="t7_d">Shows running processes and live CPU and memory usage to spot slow or stuck programs.</p></article>
+        <article class="card tool tilt"><span class="tag">Backup</span><h3>rsync / Windows Backup</h3><p data-i18n="t8_d">Copies and syncs files to another location so data can be restored when something goes wrong.</p></article>
+      </div>
+    </section>
+
+    <!-- ============ PLAYGROUND ============ -->
+    <section class="section alt" id="playground">
+      <h2 class="section-title" data-i18n="try_title">Try the Code</h2>
+      <p class="section-sub" data-i18n="try_sub">Pick a sample, edit it, then press Run. This is a safe simulated terminal. Nothing touches your real computer.</p>
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <div class="tabs" id="snipTabs">
+            <button class="tab active" data-snip="bash">Bash</button>
+            <button class="tab" data-snip="powershell">PowerShell</button>
+            <button class="tab" data-snip="ssh">SSH</button>
+            <button class="tab" data-snip="backup">Backup</button>
+          </div>
+        </div>
+        <div class="term-body">
+          <div class="pane">
+            <label for="codeInput" class="pane-label" data-i18n="try_editor">Editor</label>
+            <textarea id="codeInput" spellcheck="false" aria-label="Code editor"></textarea>
+            <div class="term-actions">
+              <button class="btn btn-fire small" id="runBtn" data-i18n="try_run">&#9654; Run</button>
+              <button class="btn btn-ghost small" id="clearBtn" data-i18n="try_clear">Clear output</button>
+            </div>
+          </div>
+          <div class="pane">
+            <span class="pane-label" data-i18n="try_output">Output</span>
+            <pre id="output" aria-live="polite"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <h2 class="section-title" data-i18n="about_title">About the Developer</h2>
+      <div class="about-card">
+        <div class="about-pic"><img src="images%20014.jpg" alt="Portrait of Prince Aeron D. Montallana" onerror="this.onerror=null;this.src='profile.svg';" /></div>
+        <div class="about-text">
+          <h3>Prince Aeron D. Montallana</h3>
+          <ul class="facts">
+            <li><b data-i18n="a_course_l">Program:</b> <span data-i18n="a_course_v">Bachelor of Science in Information Technology (BSIT)</span></li>
+            <li><b data-i18n="a_school_l">School:</b> Occidental Mindoro State College</li>
+            <li><b data-i18n="a_loc_l">Location:</b> Occidental Mindoro, Philippines</li>
+          </ul>
+          <p data-i18n="a_intro">I am an IT student who loves building web systems that solve real problems, especially information systems for local government and agriculture. This portfolio shows what I have learned about System Administration and Maintenance.</p>
+          <p data-i18n="a_interest">I am interested in the IT industry because every organization depends on technology, and I want to be one of the people who keeps it secure, organized, and running. My goal is to grow into a System Administrator and later a cloud and network professional.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Prince Aeron D. Montallana &middot; BSIT, Occidental Mindoro State College</p>
+    <p class="foot-small" data-i18n="foot">Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+  <script src="translations.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
